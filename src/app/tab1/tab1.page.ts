@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private alertCtrl: AlertController) { }
+
+
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      message: 'La finalidad es crear mayor integración de la comunidad estudiantil con la Universidad mediante la mejora de difusion de nuestros eventos Académicos, Deportivos, Culturales e Institucionales, ahora solo te toca participar...¡¡  ',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
 
 }

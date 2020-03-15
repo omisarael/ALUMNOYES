@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { AgmCoreModule } from '@agm/core';
+import { AgmDirectionModule } from 'agm-direction';
 
 @NgModule({
   imports: [
@@ -12,6 +14,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    AgmCoreModule,
+    AgmDirectionModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
   declarations: [Tab3Page]

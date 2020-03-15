@@ -1,3 +1,7 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+  ion-content.bg-image{
+    --background: url(../../assets/imagenes/paginainicio.jpg) no-repeat center center / contain;
+}
