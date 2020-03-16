@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';            // @agm/core
 import { AgmDirectionModule } from 'agm-direction';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,7 +21,8 @@ import { AgmDirectionModule } from 'agm-direction';
     AgmCoreModule.forRoot({ // @agm/core
       apiKey: 'AIzaSyBqSjmW-qyDEePr2v1sQ5-etC-6BxL3AmM',
     }),
-    AgmDirectionModule],
+    AgmDirectionModule,
+    HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

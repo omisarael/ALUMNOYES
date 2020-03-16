@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card text-center>
+    <ion-thumbnail>
+      <img src='assets/imagenes/{{evento?.imagen}}'/> 
+     </ion-thumbnail>
+    <br>
+    <h4>Id:<h5>{{evento?.id}}</h5></h4>
+    <br>
+    <br>
+    <h4>Organiza<h5>{{evento?.organiza}}</h5></h4>
+    <br>
+    <ion-card-title ><h2>Tipo de evento:</h2>{{evento?.tipoevento}}</ion-card-title>
+    <br>
+    <h2>Nombre del evento:<h1>{{evento?.nombre}}</h1></h2>
+    <br>
+    <h2>Descripcion:<p>{{evento?.descripcion}}</p></h2>
+    <br>
+    <ion-grid>
+      <ion-row align-items-start>
+        <ion-col>
+            <h2>Fecha:<h2>{{evento?.fecha}}</h2></h2>
+        </ion-col>
+        <ion-col>
+            <h2>Horario:<h2>{{evento?.horario}}</h2 ></h2>
+        </ion-col>  
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col>
+            <h2>Lugar:<h2 ngClass="selectable">{{evento?.lugar}}</h2 ></h2> 
+        </ion-col>
+        <ion-col>
+            <h2>Coordenadas Latitud:<h2 ngClass="selectable">{{evento?.latitud}}</h2 ></h2>
+            <h2>Coordenadas Longitud:<h2 ngClass="selectable">{{evento?.longitud}}</h2 ></h2> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row align-items-start>
+          <ion-col>
+              <h2><h2>{{evento?.fecha2}}</h2></h2>
+          </ion-col>
+          <ion-col>
+              <h2><h2>{{evento?.horario2}}</h2 ></h2>
+          </ion-col>  
+        </ion-row>
+        <ion-row align-items-end>
+          <ion-col>
+              <h2><h2 ngClass="selectable">{{evento?.lugar2}}</h2 ></h2> 
+          </ion-col>
+          <ion-col>
+              <h2> <h2 ngClass="selectable">{{evento?.latitud2}}</h2 ></h2>
+              <h2> <h2 ngClass="selectable">{{evento?.longitud2}}</h2 ></h2> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+          <ion-row align-items-start>
+            <ion-col>
+                <h2><h2>{{evento?.fecha3}}</h2></h2>
+            </ion-col>
+            <ion-col>
+                <h2><h2>{{evento?.horario3}}</h2 ></h2>
+            </ion-col>  
+          </ion-row>
+          <ion-row align-items-end>
+            <ion-col>
+                <h2><h2 ngClass="selectable">{{evento?.lugar3}}</h2 ></h2> 
+            </ion-col>
+            <ion-col>
+                <h2> <h2 ngClass="selectable">{{evento?.latitud3}}</h2 ></h2>
+                <h2> <h2 ngClass="selectable">{{evento?.longitud3}}</h2 ></h2> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+            <ion-row align-items-start>
+              <ion-col>
+                  <h2><h2>{{evento?.fecha4}}</h2></h2>
+              </ion-col>
+              <ion-col>
+                  <h2><h2>{{evento?.horario4}}</h2 ></h2>
+              </ion-col>  
+            </ion-row>
+            <ion-row align-items-end>
+              <ion-col>
+                  <h2><h2 ngClass="selectable">{{evento?.lugar4}}</h2 ></h2> 
+              </ion-col>
+              <ion-col>
+                  <h2> <h2 ngClass="selectable">{{evento?.latitud4}}</h2 ></h2>
+                  <h2> <h2 ngClass="selectable">{{evento?.longitud4}}</h2 ></h2> 
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-grid>
+              <ion-row align-items-start>
+                <ion-col>
+                    <h2><h2>{{evento?.fecha5}}</h2></h2>
+                </ion-col>
+                <ion-col>
+                    <h2><h2>{{evento?.horario5}}</h2 ></h2>
+                </ion-col>  
+              </ion-row>
+              <ion-row align-items-end>
+                <ion-col>
+                    <h2><h2 ngClass="selectable">{{evento?.lugar5}}</h2 ></h2> 
+                </ion-col>
+                <ion-col>
+                    <h2> <h2 ngClass="selectable">{{evento?.latitud5}}</h2 ></h2>
+                    <h2> <h2 ngClass="selectable">{{evento?.longitud5}}</h2 ></h2> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+    <br>
+    <button ion-button clear item-right (click)="toTab3()">Tab 3</button>
+  </ion-card>
+  </ion-content>

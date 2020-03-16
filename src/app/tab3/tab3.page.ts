@@ -14,7 +14,7 @@ export class Tab3Page {
   public destination: any;
 
   constructor() {
-    this.getDirection();
+    // this.getDirection();
    }
 
 

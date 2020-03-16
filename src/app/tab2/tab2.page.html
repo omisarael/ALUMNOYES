@@ -7,11 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of lista">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img src='/assets/imagenes/{{item.imagen}}'></ion-img>
+        </ion-thumbnail>
+        <ion-label>{{item.nombre}}</ion-label><br>
+        <!-- <ion-label>Organiza: {{item.organiza}}</ion-label><br> -->
+        <ion-label>{{item.fechahome}}</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="openDetailWithState(item.id)">Detalle</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
