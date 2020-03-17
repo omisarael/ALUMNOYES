@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router, NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -7,20 +7,27 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  public lat = 24.799448;
-  public lng = 120.979021;
+  public lat = 19.292120;
+  public lng = -99.655777;
 
-  public origin: any;
+  public origin: {};
   public destination: any;
 
-  constructor() {
-    // this.getDirection();
-   }
+  latitudE;
+  longitudE;
+
+  constructor(private router: Router) {
+    if (this.router.getCurrentNavigation().extras.state) {
+      this.latitudE = this.router.getCurrentNavigation().extras.state.latitud;
+      this.longitudE = this.router.getCurrentNavigation().extras.state.longitud;
+    }
+    // console.log(typeof(+this.latitudE), typeof(this.longitudE));
+  }
 
 
   getDirection() {
-    this.origin = { lat: 24.799448, lng: 120.979021 };
-    this.destination = { lat: 24.799524, lng: 120.975017 };
+    this.origin = { lat: 19.292120, lng: -99.655777 };
+    this.destination = { lat: +this.latitudE, lng: +this.longitudE };
     // this.origin = 'Taipei Main Station';
     // this.destination = 'Taiwan Presidential Office';
   }

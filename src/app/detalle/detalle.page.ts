@@ -46,7 +46,8 @@ export class DetallePage implements OnInit {
 
   toTab3() {
     const navigationExtras: NavigationExtras = {
-      state: { id: this.id }
+      state: { latitud: this.evento.latitud,
+        longitud: this.evento.longitud }
     };
     this.router.navigate(['tab3'], navigationExtras);
   }
