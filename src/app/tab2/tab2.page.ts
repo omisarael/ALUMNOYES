@@ -14,6 +14,8 @@ export class Tab2Page {
   lista: ListadoInterface[];
    plantel;
 
+   textoBuscar = '';
+
   constructor(private listadoService: ListadoServicerService, public router: Router) {
     this.lerrListado();
   }
@@ -36,6 +38,12 @@ export class Tab2Page {
       // }
     };
     this.router.navigate(['detalle'], navigationExtras);
+  }
+
+  buscar(event) {
+
+    this.textoBuscar =  event.detail.value;
+    console.log(event);
   }
 
 }

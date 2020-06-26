@@ -13,6 +13,9 @@ import { AgmCoreModule } from '@agm/core';            // @agm/core
 import { AgmDirectionModule } from 'agm-direction';
 
 import { HttpClientModule } from '@angular/common/http';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { PipesModule } from './pipes/pipes.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,10 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
       apiKey: 'AIzaSyBqSjmW-qyDEePr2v1sQ5-etC-6BxL3AmM',
     }),
     AgmDirectionModule,
-    HttpClientModule],
+    HttpClientModule,
+  PipesModule],
   providers: [
     StatusBar,
     SplashScreen,
+  Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

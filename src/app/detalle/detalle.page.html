@@ -5,13 +5,18 @@
 </ion-header>
 
 <ion-content>
+    
   <ion-card text-center>
-    <ion-thumbnail>
+
+      <ion-card>
+          <ion-img src='/assets/imagenes/{{evento?.imagen}}'></ion-img>
+         </ion-card>
+    <!-- <ion-thumbnail>
       <img src='assets/imagenes/{{evento?.imagen}}'/> 
-     </ion-thumbnail>
-    <br>
+     </ion-thumbnail> -->
+    <!-- <br>
     <h4>Id:<h5>{{evento?.id}}</h5></h4>
-    <br>
+    <br> -->
     <br>
     <h4>Organiza<h5>{{evento?.organiza}}</h5></h4>
     <br>
@@ -40,7 +45,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-grid>
+    <!-- <ion-grid>
         <ion-row align-items-start>
           <ion-col>
               <h2><h2>{{evento?.fecha2}}</h2></h2>
@@ -115,8 +120,8 @@
                     <h2> <h2 ngClass="selectable">{{evento?.longitud5}}</h2 ></h2> 
                 </ion-col>
               </ion-row>
-            </ion-grid>
+            </ion-grid> -->
     <br>
-    <button ion-button clear item-right (click)="toTab3()">Tab 3</button>
+    <ion-button expand="block" clear item-right (click)="toTab3()">Como llegar</ion-button>
   </ion-card>
   </ion-content>

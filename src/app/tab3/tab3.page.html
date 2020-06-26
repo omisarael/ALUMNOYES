@@ -1,15 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>
-      Tab 3
+      Mapa
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"> 
+<ion-content [fullscreen]="true">
   <agm-map [latitude]="lat" [longitude]="lng">
     <agm-direction [origin]="origin" [destination]="destination">
     </agm-direction>
   </agm-map>
-  <ion-button (click)="getDirection()"> ruta </ion-button>
+<ion-card>
+  <ion-card-content>
+    latitud: {{latitudE}}
+    <br>
+    longitid: {{longitudE}}
+  </ion-card-content>
+</ion-card>
+
+  <ion-button expand="block" fill="outline" (click)="getDirection()">
+    <ion-icon name="trending-up-outline"></ion-icon> Ruta
+  </ion-button>
 </ion-content>

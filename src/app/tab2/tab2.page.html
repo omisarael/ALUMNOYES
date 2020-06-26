@@ -1,14 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>
-      Tab 2
+      Eventos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+    <ion-searchbar (ionChange)="buscar($event)"></ion-searchbar>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of lista">
+    <ion-item-sliding *ngFor="let item of lista | filtro: textoBuscar: 'nombre'">
       <ion-item>
         <ion-thumbnail slot="start">
           <ion-img src='/assets/imagenes/{{item.imagen}}'></ion-img>

@@ -4,12 +4,13 @@ import { retry, catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { ListadoInterface } from '../models/listado-interface';
 import { UserModel } from '../models/user-model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListadoServicerService {
-  url = 'http://localhost:8000';
+  url = environment.urlServidorE;
 
   constructor(private http: HttpClient) { }
 
